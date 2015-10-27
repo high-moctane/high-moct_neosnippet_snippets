@@ -1,0 +1,56 @@
+# TeX Snippets
+
+# template
+snippet     template
+abbr        Template of LaTeX.
+options     head indent
+        \documentclass[a4j,11pt,uplatex]{jsarticle}
+
+        \usepackage[dvipdfmx]{graphicx}
+        \usepackage{amsmath,amssymb,bm,booktabs}
+        \usepackage{listings}
+
+        \graphicspath{{./figures/}}
+
+        \title{${1:#:title}}
+
+        \date{${2:\\today}}
+        \author{${3:#:name}}
+
+        \begin{document}
+
+        \maketitle
+
+        \clearpage
+
+        \end{document}
+
+
+# figure
+snippet     figure
+abbr        \includegraphics[ ... ]{ ... }
+options     head indent
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=${1:10truecm}]{${2:Todo.pdf}}
+            \caption{${3:#:caption}}
+            \label{fig:${4:#:label}}
+        \end{figure}
+
+# table
+snippet     table
+abbr        \begin{tabular}{ ... }
+options     head indent
+        \begin{table}[htbp]
+            \caption{${1:#:caption}}
+            \label{table:${2:#:label}}
+                \begin{center}
+                \begin{tabular}{${3:#:lcr}}} \toprule
+                    ${4:#:a & b & c} \\
+                    \midrule
+                    ${5:#:d & e & f} \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        \end{table}
+
