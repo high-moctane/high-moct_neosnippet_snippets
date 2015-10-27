@@ -1,3 +1,3 @@
-# high-moct_neosnippet_snippets
+# high-moctane NeoSnippet Snippets
 
 Snippets of neosnippet.
